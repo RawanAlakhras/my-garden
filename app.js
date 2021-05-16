@@ -73,6 +73,7 @@ form.addEventListener('submit',function(event){
     
     clearCart()
     showCart();
+    setLocal();
     
 });
 
@@ -85,3 +86,6 @@ table.addEventListener('click',function(event){
 
     }
 });
+function setLocal(){
+    localStorage.setItem('cart',JSON.stringify(cart.items));
+}
